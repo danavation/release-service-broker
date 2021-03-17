@@ -1,0 +1,25 @@
+log = "./log/"
+
+[p2p]
+enable = true
+bind = "192.168.0.130:30000"
+seeds = []
+
+persist_len = 30
+persist_path = "./peers"
+
+max_bases = 32
+max_peers = 32
+max_tasks = 1024
+max_temp = 32
+
+ms_log = 10000
+ms_peers = 20000
+ms_outbound = 10000
+ms_bases = 5000
+ms_ping = 30000
+
+[esl]
+enable = true
+bind = "192.168.1.92:1234"
+ms_log = 5000
