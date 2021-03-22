@@ -2,7 +2,7 @@ log = "./log/"
 
 [p2p]
 enable = true
-bind = "192.168.0.130:30000"
+bind = "192.168.0.104:30000"
 seeds = []
 
 persist_len = 30
