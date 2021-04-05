@@ -1,4 +1,5 @@
 log = "./log/"
+producers = ["6abf13e9f8c80e325e62a895bf5926542362579472f3a99c5a748ae899d9df59"]
 
 [p2p]
 enable = true
@@ -25,5 +26,3 @@ ms_ping = 30000
 enable = true
 bind = "192.168.1.92:1234"
 ms_log = 5000
-
-producers = ["6abf13e9f8c80e325e62a895bf5926542362579472f3a99c5a748ae899d9df59"]

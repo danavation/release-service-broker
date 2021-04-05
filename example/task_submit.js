@@ -18,12 +18,12 @@ let token = token_num.toString(16).toUpperCase()
 sample = sample.replace('D4B0', token)
 
 // update id
-let id = '02869D'
+let id = '028A2F'
 sample = sample.split('0289FE').join(id)
 
 // construction
-// let consumer = "192.168.1.200-0002-05"
-let consumer = "192.168.1.200-0001-01"
+let consumer = "192.168.1.200-0002-05"
+// let consumer = "192.168.1.200-0001-01"
 let task = new Task()
 let task_bytes = Buffer.from(sample, 'ascii')
 console.log('token', token, 'id', id, 'length', task_bytes.length)
@@ -41,9 +41,9 @@ msg.setPublic(keypair.publicKey)
 msg.setSignature(signature)
 
 // send data
-// let ip = '3.140.176.47'
 let ip = '192.168.1.92'
-let port = 1234
+// let port = 1234
+let port = 1235
 let socket = new net.Socket()
 socket.connect(port, ip, _=>{
 	socket.write(msg.serializeBinary())

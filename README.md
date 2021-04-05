@@ -1,4 +1,4 @@
-# cli
+# CLI
 ```
 USAGE:
     service-broker [OPTIONS]
