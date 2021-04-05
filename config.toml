@@ -2,8 +2,10 @@ log = "./log/"
 
 [p2p]
 enable = true
-bind = "192.168.0.88:30000"
-seeds = []
+bind = "127.0.0.1:30000"
+peers = []
+
+secret = "730978492402ef83636c6534dd3218dc78c5a43aff50c6cd76d95fb9336da55c1d7562a425ceab7d4b47d63416fee9d25b5ac1159c38e813ef46d37846246ec6"
 
 persist_len = 30
 persist_path = "./peers"
@@ -23,3 +25,5 @@ ms_ping = 30000
 enable = true
 bind = "192.168.1.92:1234"
 ms_log = 5000
+
+producers = ["6abf13e9f8c80e325e62a895bf5926542362579472f3a99c5a748ae899d9df59"]

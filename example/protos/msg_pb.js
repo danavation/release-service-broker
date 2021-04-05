@@ -71,7 +71,9 @@ proto.Msg.toObject = function(includeInstance, msg) {
   var f, obj = {
     ver: jspb.Message.getFieldWithDefault(msg, 1, 0),
     code: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    data: msg.getData_asB64()
+    data: msg.getData_asB64(),
+    pb_public: msg.getPublic_asB64(),
+    signature: msg.getSignature_asB64()
   };
 
   if (includeInstance) {
@@ -120,6 +122,14 @@ proto.Msg.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.setData(value);
       break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPublic(value);
+      break;
+    case 5:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -167,6 +177,20 @@ proto.Msg.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeBytes(
       3,
+      f
+    );
+  }
+  f = message.getPublic_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      4,
+      f
+    );
+  }
+  f = message.getSignature_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      5,
       f
     );
   }
@@ -248,6 +272,90 @@ proto.Msg.prototype.getData_asU8 = function() {
  */
 proto.Msg.prototype.setData = function(value) {
   return jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+/**
+ * optional bytes public = 4;
+ * @return {!(string|Uint8Array)}
+ */
+proto.Msg.prototype.getPublic = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * optional bytes public = 4;
+ * This is a type-conversion wrapper around `getPublic()`
+ * @return {string}
+ */
+proto.Msg.prototype.getPublic_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getPublic()));
+};
+
+
+/**
+ * optional bytes public = 4;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getPublic()`
+ * @return {!Uint8Array}
+ */
+proto.Msg.prototype.getPublic_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getPublic()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.Msg} returns this
+ */
+proto.Msg.prototype.setPublic = function(value) {
+  return jspb.Message.setProto3BytesField(this, 4, value);
+};
+
+
+/**
+ * optional bytes signature = 5;
+ * @return {!(string|Uint8Array)}
+ */
+proto.Msg.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * optional bytes signature = 5;
+ * This is a type-conversion wrapper around `getSignature()`
+ * @return {string}
+ */
+proto.Msg.prototype.getSignature_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getSignature()));
+};
+
+
+/**
+ * optional bytes signature = 5;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getSignature()`
+ * @return {!Uint8Array}
+ */
+proto.Msg.prototype.getSignature_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getSignature()));
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.Msg} returns this
+ */
+proto.Msg.prototype.setSignature = function(value) {
+  return jspb.Message.setProto3BytesField(this, 5, value);
 };
 
 
