@@ -1,2 +1,5 @@
+# 0.0.3
+* update cli
+
 # 0.0.2
-* ed25519 signature
+* add ed25519 signature
