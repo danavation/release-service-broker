@@ -1,12 +1,11 @@
 log = "./log/"
+secret = ""
 producers = []
 
 [p2p]
 enable = true
 bind = "0.0.0.0:30000"
 peers = []
-
-secret = ""
 
 persist_len = 30
 persist_path = "./peers"

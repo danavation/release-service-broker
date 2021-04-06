@@ -1,3 +1,6 @@
+# 0.0.4
+* add gossip cache
+
 # 0.0.3
 * update cli
 
