@@ -42,7 +42,9 @@ msg.setPublic(keypair.publicKey)
 msg.setSignature(signature)
 
 // send data
-let ip = '192.168.1.92'
+let ip = '3.140.176.47'
+//let ip = '3.128.33.4'
+//let ip = '192.168.1.92'
 let port = 1234
 // let port = 1235
 let socket = new net.Socket()
