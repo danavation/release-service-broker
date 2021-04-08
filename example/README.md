@@ -1,3 +1,7 @@
+# init
+```
+npm i
+```
 # generate keypair
 ```
 node ./keygen.js

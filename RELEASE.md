@@ -1,3 +1,9 @@
+# 0.0.6
+* drop inbound connection if public key exists
+
+# 0.0.5
+* drop inbound connection if public key exists
+
 # 0.0.4
 * add gossip cache
 

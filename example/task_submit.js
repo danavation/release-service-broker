@@ -47,8 +47,9 @@ let ip = '3.140.176.47'
 //let ip = '192.168.1.92'
 let port = 1234
 // let port = 1235
+console.log('ip', ip, 'port', port)
 let socket = new net.Socket()
 socket.connect(port, ip, _=>{
 	socket.write(msg.serializeBinary())
-	setTimeout(_=>socket.destroy(), 5000)
+	// setTimeout(_=>socket.destroy(), 5000)
 })
