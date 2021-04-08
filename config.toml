@@ -10,9 +10,7 @@ peers = []
 persist_len = 30
 persist_path = "./peers"
 
-max_bases = 32
 max_peers = 32
-max_tasks = 1024
 max_temp = 32
 
 ms_log = 20000
@@ -24,4 +22,7 @@ ms_ping = 300000
 [esl]
 enable = true
 bind = "0.0.0.0:1234"
+
+max_bases = 1024
+
 ms_log = 5000

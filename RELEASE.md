@@ -1,5 +1,10 @@
+# 0.0.7
+* limit temp list
+* limit bases list
+* clear config
+
 # 0.0.6
-* drop inbound connection if public key exists
+* prevent double handshake
 
 # 0.0.5
 * drop inbound connection if public key exists
