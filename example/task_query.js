@@ -11,7 +11,7 @@ let keypair = nacl.sign.keyPair.fromSecretKey(secret)
 const VER = 0, CODE = 7
 
 /* construct query */
-let token = '2B7B'
+let token = 'B5E2'
 let req = new StatusReq()
 req.setToken(token)
 let msg = new Msg()
@@ -22,11 +22,10 @@ msg.setData(data)
 msg.setPublic(keypair.publicKey)
 msg.setSignature(nacl.sign.detached(data, keypair.secretKey))
 
-
 /* send */
-// let ip = '3.140.176.47'
+let ip = '3.140.176.47'
 // let ip = '3.128.33.4'
-let ip = '192.168.1.92'
+// let ip = '192.168.1.92'
 let port = 1234
 let socket = new net.Socket()
 socket.connect(port, ip, _=>{
@@ -39,5 +38,5 @@ socket.connect(port, ip, _=>{
 		console.log('status.tempreture', status.getTempreture())
 	})
 	socket.write(msg.serializeBinary())
-	setTimeout(_=>socket.destroy(), 5000)
+	setTimeout(_=>socket.destroy(), 1000 * 30)
 })
