@@ -4,8 +4,8 @@ USAGE:
     service-broker [OPTIONS]
 OPTIONS:
     -h, --help                  
-    -k, --key
-    -c, --config=[path]
+    -k, --key              // generate secret and public
+    -c, --config=[path]    // specific custom config path, eg: ./service-broker -c=./my_config.toml
     -v, --versions
 ```
 

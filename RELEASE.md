@@ -1,3 +1,6 @@
+# 0.0.8
+* emit base connect events and label status through socket
+
 # 0.0.7
 * limit temp list
 * limit bases list

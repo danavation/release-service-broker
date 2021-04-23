@@ -2,15 +2,13 @@
 ```
 npm i
 ```
+
 # generate keypair
 ```
 node ./keygen.js
 ```
-# submit task
+
+# example
 ```
-node ./task_submit.js
-```
-# query task
-```
-node ./task_query.js
+node ./example.js
 ```
