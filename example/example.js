@@ -6,8 +6,8 @@ const Base = require('./protos/esl_pb.js').Base
 const Label = require('./protos/esl_pb.js').Label
 
 // let ip = '3.140.176.47'
-// let ip = '3.128.33.4'
-const ip = '192.168.1.92'
+let ip = '3.128.33.4'
+// const ip = '192.168.1.92'
 const port = 1234
 console.log(`connect ${ip}:${port}`)
 
@@ -29,9 +29,9 @@ sample = sample.replace('D4B0', token)
 let id = '028A2F'
 sample = sample.split('0289FE').join(id)
 
-// let consumer = "99.247.136.70-0002-05"
+let consumer = "99.247.136.70-0002-05"
 // let consumer = "192.168.1.200-0001-01"
-let consumer = "192.168.1.200-0002-05"
+// let consumer = "192.168.1.200-0002-05"
 let task = new Task()
 let task_bytes = Buffer.from(sample, 'ascii')
 console.log(`task token=${token} label=${id} data-len=${task_bytes.length}`)

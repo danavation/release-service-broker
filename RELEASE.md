@@ -1,3 +1,6 @@
+# 0.0.9
+* enable multi-sockets connections from clients
+
 # 0.0.8
 * emit base connect events and label status through socket
 
