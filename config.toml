@@ -33,3 +33,4 @@ max_clients = 1024
 max_msgs = 5000
 
 ms_log = 10000
+ms_task = 1000
