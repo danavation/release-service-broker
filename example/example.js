@@ -66,6 +66,6 @@ socket.connect(port, ip, _=>{
 		}
 	})
 
-	call(socket, 0, 50000)
+	call(socket, 0, 100000)
 	// call(socket, 0, 1)
 })
