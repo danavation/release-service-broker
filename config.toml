@@ -1,28 +1,35 @@
+# specific log file path
 log = "./log/"
+# secret key used to sign msg, use option -k to generate
 secret = ""
+# public key white list for authorized producers
 producers = []
 
 [p2p]
 enable = true
 bind = "0.0.0.0:30000"
+# format: ["{ip_0}:{port_0}", "{ip_1}:{port_1}", ...] 
 peers = []
 
 persist_len = 30
 persist_path = "./peers"
 
-max_peers = 32
 max_temp = 32
+max_peers = 32
+max_msgs = 5000
 
 ms_log = 20000
 ms_peers = 60000
 ms_outbound = 30000
 ms_bases = 60000
 ms_ping = 300000
+ms_task = 100
 
 [esl]
 enable = true
 bind = "0.0.0.0:1234"
 
-max_bases = 1024
+max_clients = 1024
+max_msgs = 5000
 
-ms_log = 5000
+ms_log = 10000

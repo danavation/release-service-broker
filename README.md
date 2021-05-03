@@ -13,3 +13,8 @@ OPTIONS:
 ```
 wget -O service-broker-x86_64-ubuntu https://github.com/danavation/releases/blob/service-broker/service-broker-x86_64-ubuntu?raw=true
 ```
+
+# Run
+```
+nohup ./service-broker-x86_64-ubuntu >/dev/null 2>&1 &
+```

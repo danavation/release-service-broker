@@ -1,3 +1,6 @@
+# 0.0.10
+* inner messages queue and vendor specific protocol implementation 
+
 # 0.0.9
 * enable multi-sockets connections from clients
 
