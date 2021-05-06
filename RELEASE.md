@@ -1,3 +1,6 @@
+# 0.0.11
+* prevent msg storm
+
 # 0.0.10
 * inner messages queue and vendor specific protocol implementation 
 

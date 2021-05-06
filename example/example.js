@@ -13,10 +13,10 @@ const consumer = "192.168.1.200-0002-05"
 const secret = '425172b35dcca86adb460d15d4ef364f9d0a9bab75b300de63f7208d942c92746abf13e9f8c80e325e62a895bf5926542362579472f3a99c5a748ae899d9df59'
 // const secret = 'd598df95b6a3c57675f2c72ff3bfc7c860e6f71981c214acb492a576c99ef60e552640401f3ab101f4bd93a52386008c4d88f94ba1acbbf54838f82f0c1c2706'
 const keypair = nacl.sign.keyPair.fromSecretKey(Uint8Array.from(Buffer.from(secret, 'hex')))
-// const ip = '3.140.176.47', port = 1234
 // const ip = '3.128.33.4', port = 1234
-// const ip = '192.168.1.92', port = 1234
-const ip = '192.168.1.92', port = 1235
+// const ip = '18.191.236.46', port = 1234
+const ip = '192.168.1.92', port = 1234
+// const ip = '192.168.1.92', port = 1235
 
 const build = () => {
 	let token = Math.round(Math.random() * (65535 - 0) + 0).toString(16).toUpperCase()
@@ -66,6 +66,6 @@ socket.connect(port, ip, _=>{
 		}
 	})
 
-	call(socket, 0, 100000)
+	call(socket, 0, 100000000)
 	// call(socket, 0, 1)
 })
