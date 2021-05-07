@@ -1,3 +1,6 @@
+# 0.0.12
+* update selected vendor id format
+
 # 0.0.11
 * prevent msg storm
 
