@@ -1,14 +1,12 @@
-# specific log file path
 log = "./log/"
-# secret key used to sign msg, use option -k to generate
 secret = ""
-# public key white list for authorized producers
 producers = []
+
+max_tasks_lru = 10000
 
 [p2p]
 enable = true
 bind = "0.0.0.0:30000"
-# format: ["{ip_0}:{port_0}", "{ip_1}:{port_1}", ...] 
 peers = []
 
 persist_len = 30

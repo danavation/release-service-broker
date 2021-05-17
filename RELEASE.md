@@ -1,3 +1,6 @@
+# 0.0.13
+* patch ping-pong
+
 # 0.0.12
 * update selected vendor id format
 
