@@ -2,7 +2,7 @@ log = "./log/"
 secret = ""
 producers = []
 
-max_tasks_lru = 10000
+max_msgs = 10000
 
 [p2p]
 enable = true
@@ -14,7 +14,6 @@ persist_path = "./peers"
 
 max_temp = 32
 max_peers = 32
-max_msgs = 5000
 
 ms_log = 20000
 ms_peers = 60000
@@ -28,7 +27,6 @@ enable = true
 bind = "0.0.0.0:1234"
 
 max_clients = 1024
-max_msgs = 5000
 
 ms_log = 10000
 ms_task = 1000
