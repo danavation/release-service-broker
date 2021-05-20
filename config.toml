@@ -2,6 +2,7 @@ log = "./log/"
 secret = ""
 producers = []
 
+max_msg = 65536
 max_msgs = 10000
 
 [p2p]

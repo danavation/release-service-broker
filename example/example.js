@@ -5,7 +5,7 @@ const Task = require('./protos/esl_pb.js').Task
 const Base = require('./protos/esl_pb.js').Base
 const Label = require('./protos/esl_pb.js').Label
 
-const labels = ['028909']
+const labels = ['03CB43']
 
 // const label = '02869D'
 const consumer = "0001-00"
@@ -15,10 +15,11 @@ const secret = '425172b35dcca86adb460d15d4ef364f9d0a9bab75b300de63f7208d942c9274
 const keypair = nacl.sign.keyPair.fromSecretKey(Uint8Array.from(Buffer.from(secret, 'hex')))
 // const ip = '3.128.33.4', port = 1234
 // const ip = '18.191.236.46', port = 1234
-const ip = '192.168.1.92', port = 1235
+const ip = '192.168.1.92', port = 1234
 
 const build = (index) => {
 	let label = labels[Math.round(Math.random() * (labels.length - 1) + 0)]
+	//let token = 'FFFF'
 	let token = Math.round(Math.random() * (65535 - 0) + 0).toString(16).toUpperCase()
 	let sample = `@0001B6${label}0000111001A4${label}330700${token}00ED0000FC00000000006700D7000000A900C233F00122F001A8F00122F001A8F00122F001A8F00122F001A8F00122F001A64A81FC8E074D01A54A87FE8E81EFFE01A44A8F478783CFFE01A6F08F83E1E1E1E001A7F08C81E0F3C1E001A7F08F4983DC8701ACF09F4981F88701ACF09F4907F88701ACF09C10F88701ACF09C0FFC83C001A6F09E0EF781E001A7F08E0EF3C1E001A7F8CFC0E1E1E1F101A8478F488E8783FC01A64787489C83C3FC01A8FC87F8B883C1F8001212FC80000000806700D70000000300E856`
 	let task = new Task()
@@ -69,5 +70,5 @@ socket.connect(port, ip, _=>{
 	})
 
 	// call(socket, 0, 200000000)
-	call(socket, 0, 10)
+	call(socket, 0, 1)
 })
