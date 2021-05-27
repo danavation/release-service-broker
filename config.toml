@@ -16,7 +16,7 @@ persist_path = "./peers"
 max_temp = 32
 max_peers = 32
 
-ms_log = 20000
+ms_log = 30000
 ms_peers = 60000
 ms_outbound = 30000
 ms_bases = 60000
@@ -29,5 +29,5 @@ bind = "0.0.0.0:1234"
 
 max_clients = 1024
 
-ms_log = 10000
+ms_log = 35000
 ms_task = 1000
