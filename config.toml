@@ -21,7 +21,7 @@ ms_peers = 60000
 ms_outbound = 30000
 ms_bases = 60000
 ms_ping = 300000
-ms_task = 100
+ms_task = 10
 
 [esl]
 enable = true
