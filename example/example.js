@@ -61,7 +61,7 @@ socket.connect(port, ip, _=>{
 			break;
 			case 8: 
 				let label = Label.deserializeBinary(msg.getData())
-				console.log(`label token=${label.getToken()} id=${label.getId()} signal=${label.getSignal()} power=${label.getPower()} tempreture=${label.getTempreture()}`)
+				console.log(`label token=${label.getToken()} id=${label.getId()} signal=${label.getSignal()} power=${label.getPower()} temperature=${label.getTemperature()}`)
 			break;
 			default:
 				console.log(`unknown codec=${msg.getCode()}`)

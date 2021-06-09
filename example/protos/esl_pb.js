@@ -461,7 +461,7 @@ proto.esl.Label.toObject = function(includeInstance, msg) {
     id: jspb.Message.getFieldWithDefault(msg, 2, ""),
     signal: jspb.Message.getFieldWithDefault(msg, 3, 0),
     power: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    tempreture: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    temperature: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -516,7 +516,7 @@ proto.esl.Label.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 5:
       var value = /** @type {number} */ (reader.readInt64());
-      msg.setTempreture(value);
+      msg.setTemperature(value);
       break;
     default:
       reader.skipField();
@@ -575,7 +575,7 @@ proto.esl.Label.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getTempreture();
+  f = message.getTemperature();
   if (f !== 0) {
     writer.writeInt64(
       5,
@@ -658,10 +658,10 @@ proto.esl.Label.prototype.setPower = function(value) {
 
 
 /**
- * optional int64 tempreture = 5;
+ * optional int64 temperature = 5;
  * @return {number}
  */
-proto.esl.Label.prototype.getTempreture = function() {
+proto.esl.Label.prototype.getTemperature = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -670,7 +670,7 @@ proto.esl.Label.prototype.getTempreture = function() {
  * @param {number} value
  * @return {!proto.esl.Label} returns this
  */
-proto.esl.Label.prototype.setTempreture = function(value) {
+proto.esl.Label.prototype.setTemperature = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
